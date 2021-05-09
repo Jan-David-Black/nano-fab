@@ -1,0 +1,89 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  IEEEsample2e.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% changes for IEEEtrans.cls marked with !PN
+%% except all occ. of IEEEtran.sty changed IEEEtran.cls
+%%%%%%%%%%                                                       %%%%%%%%%%%%%
+%%%%%%%%%%    More information: see the header of IEEEtran.cls   %%%%%%%%%%%%%
+%%%%%%%%%%                                                       %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[journal]{IEEEtran} %!PN
+%\documentclass[12pt,draft,onecolumn]{ieeetran} %!PN
+%\documentstyle[twocolumn]{IEEEtran}
+%\documentstyle[12pt,twoside,draft]{IEEEtran}
+%\documentstyle[9pt,twocolumn,technote,twoside]{IEEEtran}
+%\usepackage{epsfig}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{wrapfig}
+
+%\usepackage[english]{babel}
+%\usepackage[ansinew]{inputenc}
+
+
+
+
+
+
+
+\begin{document}
+
+\title{Complementary Metal-Oxide-Semiconductor Technology based on Silicon-on-Insulator}
+%
+\author{Juri Banchewski, Matthias D\"uck, Stefan Gausmann, Alexander von Hoegen and Bin Sun\thanks{The authors are with RWTH Aachen University, 52074 Aachen, Germany. Copyright (c) 2013 IEEE. Personal use of this material is permitted.
+However, permission to use this material for any other purposes must be
+obtained from the IEEE by sending a request to pubs-permissions@ieee.org.}}
+
+\maketitle
+%
+\begin{abstract}
+  abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract.
+\end{abstract}
+
+\begin{IEEEkeywords}
+...,...,... .
+\end{IEEEkeywords}
+%
+\section{Introduction}\label{intro}
+\IEEEPARstart{I}{n} recent years, ... \cite{test}.
+
+Here is the background that should be considered when writing the paper. Suppose we are back some time at the beginning of the 90's of the last century. The era of the so-called \lq\lq happy scaling\rq\rq , where the semiconductor industry just made everything smaller and smaller, seemed to be ending soon. However, a newly developed substrate technology - silicon-on-insulator - allowed adjusting the channel layer thickness by simply making the SOI thickness appropriately thin. In addition, since the active area of the device sits on top of an insulator (SiO$_2$) the insulation of adjacent devices can be accomplished by a simple mesa etch instead of the commonly used n- and p-well technology in bulk-silicon. Simulations have shown that by reducing the SOI thickness, short channel effects can be suppressed efficiently allowing for a further reduction of the device's channel length. Nevertheless, so far nobody has tried to fabricated CMOS transistors or CMOS circuit blocks on SOI and so it is unclear whether SOI will be a successful route out of the impending end of the scaling era. Together with some colleagues you successfully demonstrated SOI CMOS and the results of yours study are published with the present paper. 
+
+Accordingly, in the introduction you should first mention how successful semiconductor and in particular CMOS technology is and how it penetrates all aspects of modern life. BUT... scaling leads to short channel effect prohibiting appropriate gate control, this leads to leakage which is deleterious for mobile applications etc., etc. etc. (yes, even at that time there were already mobile devices available on the market). However, in recent simulations studies the use of SOI seemed promising (if you wish you can even use your own NEGF code to do some simulations and refer to one of your fictitiuos papers (invent a title and choose a journal where you think your seminal work was published...)) but the experimental proof is sill missing. Here, you show .... 
+
+When writing the introduction it is important that you raise the reader's interest. In principle, your paper is similar to a brochure of some company; you want to "sell" the contents of your paper. I heard about a study that on average every paper is read 1.5 times (once by the referee and well.... not much left, right?) and you don't want your hard work to be one of the average papers. So, advertise your work but please use a scientific language. 
+
+
+\section{Impact of Short-Channel-Effects on Circuit Performance/Power Consumption/ Device Performance}
+
+Choose a title as suggested above. Your choice depends on the story you want to tell. 
+\begin{figure}[!t]
+\centering
+\includegraphics[width=2.5in]{rwth_iht_en_rgb}
+\caption{Figure caption...}
+\label{fig:f1}
+\end{figure}
+
+Figure~\ref{fig:f1} shows ...
+
+\section{Device Fabrication}\label{fab}
+
+\section{Device Characterization}\label{measure}
+In section~\ref{fab} ...
+
+\section{Conclusion}
+We studied ...,...,...,...
+
+\section*{Acknowledgments}
+This work was supported by Institute of Semiconductor Electronics, RWTH Aachen University. The authors thank N. Wilck for technical assistance.
+
+\begin{thebibliography}{10}\footnotesize
+\bibitem{test} J. Appenzeller, J. Knoch, V. Derycke, R. Martel, S. Wind and Ph, Avouris, \lq\lq Field-modulated carrier transport in carbon nanotube transistors\rq\rq, {\it Phys. Rev. Lett.}, {\bf 89}, 126801 (2002).
+\end{thebibliography}
+
+\begin{IEEEbiography}{E. Xample} received... as an example see my brief bio below. You can add yours if you wish (and you should remove mine).
+\end{IEEEbiography}
+\begin{IEEEbiography}{J. Knoch} studied physics at RWTH Aachen University and Queen Mary, University of London. He received the Diploma and Ph.D. degrees in physics from RWTH Aachen University, Germany, in 1998 and 2001, respectively. After postdoctoral research on InP HEMTs at the Microsystems Technology Laboratory, Massachusetts Institute of Technology, USA, he joined the Research Center J\"ulich, Germany, as a Research Staff Member, where he investigated electronic transport in alternative field-effect transistors such as carbon nanotube FETs, ultrathin body Schottky-barrier devices, and band-to-band tunnel FETs. In December 2006, he accepted a position as Research Staff Member at IBM Zurich Research Laboratory, Switzerland, working on nanowire transistors with an emphasis on tunnel FETs. In September 2008, he was appointed Associate Professor of electrical engineering at TU Dortmund University, Dortmund, Germany, and since May 2011, he has been a Full Professor and the Head of the Institute of Semiconductor Electronics, RWTH Aachen University. His research interests include nanoelectronics, nanoelectromechanical sensors and photovoltaics.
+\end{IEEEbiography}
+\begin{IEEEbiography}{J. Banchewski} ....
+\end{IEEEbiography}
+\end{document}

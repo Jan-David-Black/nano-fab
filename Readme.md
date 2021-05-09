@@ -7,4 +7,4 @@ Questions while reading the script:
 1. $`\dot L`$ in eqtn. (23) -> probably typo; Factor 10 missing in the following eqtn.
 2. one 2 missing in (15) (spin degeneration)
 3. "steepest  inverse  subthreshold  slope" for shortest gate length?? I think the opposite is meant? p. 19 
-4. $`\Phi_{SB} \geq 4-5 \times k_BT`$ -> unit of 4?? eV?
+4. $`\Phi_{SB} \geq 4-5 \times k_BT`$ -> 4 to 5!!
