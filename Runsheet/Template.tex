@@ -16,6 +16,19 @@
 \renewcommand*{\thesubfigure}{%
 \alphalph{\value{subfigure}}%
 }%
+
+\newcommand{\executeiffilenewer}[3]{%
+\ifnum\pdfstrcmp{\pdffilemoddate{#1}}%
+{\pdffilemoddate{#2}}>0%
+{\immediate\write18{#3}}\fi%
+}
+\newcommand{\includesvg}[1]{%
+\executeiffilenewer{#1.svg}{#1.pdf}%
+{inkscape -z -D --file="#1.svg" %
+--export-pdf="#1.pdf" --export-latex --export-area-page}%
+\input{#1.pdf_tex}%
+}
+
 %%%%%%%%%%%%%%%%% counter too large
 \begin{document}
 
@@ -28,9 +41,9 @@
 \multicolumn{2}{l}{\textbf{Project}}&\multicolumn{2}{l}{Fabrication and Characterization of Nanoelectronic Devices and Circuits}\\
 %\textbf{} &  &of Nanoelectronic Devices and Circuits& \\% Job number and last updated date
 %\multicolumn{2}{l}{}&\multicolumn{2}{l}{Nanoelectronic Devices and Circuits}\\
-\textbf{Owner} & Bin Sun &    \textbf{Start Date} & 01.04.2019\\% Job number and last updated date
+\textbf{Owner} & Jan-David Fischbach &    \textbf{Start Date} & 14.05.2021\\% Job number and last updated date
 
-   \textbf{Page} & \thepage/\pageref{lastpage}& \textbf{Revised Date}&\today\\ % Version and reviewed date
+   \textbf{Page} & \thepage/\pageref{LastPage}& \textbf{Revised Date}&\today\\ % Version and reviewed date
 
 %   \textbf{Samples} & xxxx& &\\ % Version and reviewed date
 \multicolumn{2}{l}{\textbf{Samples}}&\multicolumn{2}{r}{6 SOI samples, 6 bulk samples}\\
@@ -69,17 +82,14 @@ DI water rinse 10\,min
 \end{tabular}
 \end{table}  
 \vspace{-0.5cm}   
-\begin{figure}[H]
-	\centering
-  \subfigure[]{\includegraphics[width=6.2cm]{ihtlogo.pdf}}
-  \subfigure[]{\includegraphics[width=6.2cm]{ihtlogo.pdf}}
-  \subfigure[]{\includegraphics[width=6.2cm]{ihtlogo.pdf}}
-  \subfigure[]{\includegraphics[width=6.2cm]{ihtlogo.pdf}}
-  \subfigure[]{\includegraphics[width=6.2cm]{ihtlogo.pdf}}
-  \subfigure[]{\includegraphics[width=6.2cm]{ihtlogo.pdf}}
-    \subfigure[]{\includegraphics[width=6.2cm]{ihtlogo.pdf}}
-  \subfigure[]{\includegraphics[width=6.2cm]{ihtlogo.pdf}}
-  \caption{caption.}
+
+\graphicspath{{Assets}}
+\begin{figure}[ht]
+  \centering
+      \def\svgwidth{0.45\columnwidth}
+      \includesvg{Assets/ER}
+      \caption{Estimation of the etch rate from dektak and confocal microscope measurements}
+      \label{fig:cross_section}
 \end{figure}
 
 \end{document}   
