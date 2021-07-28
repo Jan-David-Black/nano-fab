@@ -1,0 +1,173 @@
+\documentclass[12pt, a4paper, landscape]{article}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[top=25pt,bottom=40pt,left=30pt,right=30pt]{geometry}
+\usepackage[utf8x]{inputenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage[absolute]{textpos}         
+\usepackage[table]{xcolor}
+\usepackage{lastpage}
+\usepackage{multirow}
+\usepackage{subfigure} 
+\usepackage{amsmath}
+\usepackage{float} 
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{alphalph}
+\renewcommand*{\thesubfigure}{%
+\alphalph{\value{subfigure}}%
+}%
+%%%%%%%%%%%%%%%%% counter too large
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent\fbox{
+%  \parbox{\textwidth}{
+
+\resizebox{0.6\textwidth}{!}{\begin{tabular}{l r l r} % The header is a table with 4 columns
+
+\multicolumn{2}{l}{\textbf{Project}}&\multicolumn{2}{l}{Fabrication and Characterization of Nanoelectronic Devices and Circuits}\\
+%\textbf{} &  &of Nanoelectronic Devices and Circuits& \\% Job number and last updated date
+%\multicolumn{2}{l}{}&\multicolumn{2}{l}{Nanoelectronic Devices and Circuits}\\
+\textbf{Owner} &  &  \textbf{Start Date} & 02.06.2021\\% Job number and last updated date
+
+   \textbf{Page} & \thepage/\pageref{LastPage}& \textbf{Revised Date}&\today\\ % Version and reviewed date
+
+%   \textbf{Samples} & xxxx& &\\ % Version and reviewed date
+\multicolumn{2}{l}{\textbf{Samples}}&\multicolumn{2}{r}{6 SOI samples, 6 bulk samples}\\
+\end{tabular}}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textblockorigin{-145pt}{-15pt}
+\begin{textblock*}{1cm}(.805\textwidth,27pt)
+\includegraphics[width=11.5cm]{rwth_iht_en_rgb.jpg}
+\end{textblock*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% YOUR TEXT STARTS HERE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.1cm}   
+\subsubsection*{Session 3: Active area (mesa) definition of SOI samples}     
+\vspace{-0.5cm}   
+\begin{table}[H]
+\footnotesize
+\begin{tabular}{| p{0.4cm}| p{4.0cm}| p{3.0cm}|p{2.0cm}| p{2.0cm}|p{13.5cm}|}
+\hline
+\textbf{Nr.}&\textbf{Description} &\textbf{Tool}& \textbf{Date}  &\textbf{Duration} & \textbf{Parameters}\\ \hline\hline
+
+% \textbf{Nr.}&\textbf{Description}  &\textbf{Tool}&\textbf{Operator}&\textbf{Date}  &\textbf{Duration}       &        \textbf{Parameters}\\ \hline\hline
+1. &HMDS Coating& HMDS coater& 02.06.2021 & 5-8 min & 135$^{\circ}$C  \\\hline
+2. &Photoresist Coating& spin coater &  02.06.2021 &  4 sec\newline 60 sec& 1000 rpm\newline 3000rpm \\\hline
+3. &Soft bake&   hot plate& 02.06.2021 & 90 sec & 95$^{\circ}$C \\\hline
+4. &Optical lithography &laser scanner  &   02.06.2021 & 14 min & 405 nm\newline 30\% transmission 1505 mJ/cm$^2$ 25.3 $^{\circ}$C \newline 4step-752 mJ/cm$^2$ \\\hline
+5. &Post exposure bake &  hot plate&   02.06.2021 &90 sec & 125 $^{\circ}$C\\\hline
+6. &Development & wet bench & 02.06.2021  & 45 sec &Developer MIF AZ726\newline rinse with DI water\\\hline
+7. &Reactive ion etching & ICP-RIE (PlasmaPro 100 cobra) & 02.06.2021 &100 sec & 15mTor\newline 20W\\\hline
+7. &Reactive ion etching\newline  from another group & ICP-RIE & 02.06.2021 &120 sec & Descum\newline
+Pressure:10 mTor\newline
+HF:10W\newline
+O$_2$:20 sccm
+He Backing:10 sccm\newline
+Temp:45$^{\circ}$C
+\\\hline
+7. &Reactive ion etching & ICP-RIE (PlasmaPro 100 cobra) & 02.06.2021 &100sec, 30sec &
+Si-etch, SF6/O2\newline
+Etchrate: 3.7nm/s\newline
+Target depth: 340nm/80nm \newline
+Pressure:15mTor\newline
+HF:20W\newline
+ICP:0W
+SF6:37.5sccm O$_2$:11 sccm\newline
+He Backing:10sccm, Temp:45$^{\circ}$C
+\\\hline
+\end{tabular}
+\end{table} 
+
+\vspace{-0.5cm}   
+\begin{figure}[H]
+	\centering
+  \subfigure[]{\includegraphics[width=6.2cm]{ihtlogo.pdf}}
+  \caption{caption.}
+\end{figure}
+
+\newpage
+\subsubsection*{Session 4: Formation of gate dielectrics}     
+\vspace{-0.5cm}   
+\begin{table}[H]
+\footnotesize
+\begin{tabular}{| p{0.4cm}| p{4.0cm}| p{3.0cm}|p{2.0cm}| p{2.0cm}|p{13.5cm}|}
+\hline
+\textbf{Nr.}&\textbf{Description} &\textbf{Tool}& \textbf{Date}  &\textbf{Duration} & \textbf{Parameters}\\ \hline\hline
+
+1. &RCA clean&  &09.06.2021 & & Piranha etching\newline 
+piranha solution: 150\,ml H$_\text{2}$SO$_\text{4}$ + 50\,ml H$_\text{2}$O$_\text{2}$, 10\,min\newline
+DI water rinse 10\,min\newline
+1\,\% HF till surface is hydrophobic, 20 sec\newline
+DI water rinse 10\,min\newline
+SC-1: 125\,ml H$_\text{2}$O + 25\,ml NH$_\text{4}$OH + 25\,ml H$_\text{2}$O$_\text{2}$: 10\,min \newline
+DI water rinse 10\,min\newline
+1\,\% HF till surface is hydrophobic, 20 sec\newline
+DI water rinse 10\,min\newline
+SC-2: 150\,ml H$_\text{2}$O + 25\,ml HCl + 25\,ml H$_\text{2}$O$_\text{2}$: 10\,min\newline
+DI water rinse 10\,min
+\\\hline
+
+2. & Oxidation & &  09.06.2021&    130 sec & To obtain 15 nm d$_{ox}$\\\hline
+\end{tabular}
+\end{table} 
+
+\vspace{-0.5cm}   
+\begin{figure}[H]
+	\centering
+  \subfigure[]{\includegraphics[width=6.2cm]{ihtlogo.pdf}}
+  \caption{caption.}
+\end{figure}
+
+\newpage
+\subsubsection*{Session 6: Lift-off, silicidation and definition of gate electrode}     
+\vspace{-0.5cm}   
+\begin{table}[H]
+\footnotesize
+\begin{tabular}{| p{0.4cm}| p{4.0cm}| p{3.0cm}|p{2.0cm}| p{2.0cm}|p{13.5cm}|}
+\hline
+\textbf{Nr.}&\textbf{Description} &\textbf{Tool}& \textbf{Date}  &\textbf{Duration} & \textbf{Parameters}\\ \hline\hline
+1. & Lift-off of alumininum layer &  & 24.06.2021 &  & Bathe with Acetone and Propanol\newline 
+Flush with syringe\newline  Dehydration 150$^{\circ}$C\\\hline
+
+2. &Primer coating\newline (HDMS) & & 24.06.2021&  3 sec \newline 1 min&   1000rpm \newline  6000rpm \\\hline
+3. &Soft bake & hot plate & 24.06.2021 & 90sec& 95$^{\circ}$C\\\hline
+4. & Photoresist coating\newline (AZ S214B)& spin coater & 24.06.2021 & 3 sec\newline 60 sec & 1000rpm \newline3000rpm \\\hline
+5. &Soft bake & hot plate & 24.06.2021 & 90sec& 95$^{\circ}$C\\\hline
+6. & Edges removal with q-tips dipped  in acetone& q-tip & & 24.06.2021 &  \\\hline
+7. & Overlay Alignment &  &   24.06.2021 & &\\\hline
+8. & Short Exposure&  &    24.06.2021&2 sec & Hg lamp 405 nm \\\hline
+9. & Reverse bake & & 24.06.2021&2min & 120$^{\circ}$C\\\hline
+10. & Flood Exposure&  &    24.06.2021& 15sec &\\\hline
+11. & Development& wet bench &   24.06.2021&  36 sec & MIF 726\newline DI water rinse for a few minutes \\\hline
+\end{tabular}
+\end{table} 
+
+\vspace{-0.5cm}   
+\begin{figure}[H]
+	\centering
+  \subfigure[]{\includegraphics[width=6.2cm]{ihtlogo.pdf}}
+  \caption{caption.}
+\end{figure}
+
+
+
+\end{document}   
+         
+$_\text{2}$
+ \textcolor{red}{}
+         
+\vspace{-0.5cm}   
+\begin{table}[H]
+\footnotesize
+\begin{tabular}{| p{0.4cm}| p{2.8cm}| p{2.0cm}|p{2.0cm}| p{2.0cm}| p{2.0cm}|p{13.5cm}|}
+\hline
+\textbf{Nr.}&\textbf{Description}  &\textbf{Tool}&\textbf{Operator}&\textbf{Duration}  &\textbf{End Date }       &        \textbf{Parameters}\\ \hline\hline
+1.  &\multirow{1}{8em}{Description}& Tool  & Operator  & Duration & End Date & Parameters \\\hline
+
+\end{tabular}
+\end{table}              
