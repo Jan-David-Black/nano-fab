@@ -1,4 +1,4 @@
 {
     "python.pythonPath": "/home/jan-david/conda/bin/python",
-    "jupyter.jupyterServerType": "remote"
+    "jupyter.jupyterServerType": "local"
 }
